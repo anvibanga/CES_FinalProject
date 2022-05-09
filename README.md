@@ -14,3 +14,4 @@ Materials Used:
 Our hypnosis wheel consisted of 2 ESP32s, one connected to a button, and one connected to a stepper motor. Once the button is pressed, the first ESP32 broadcasts a message to the second one, and the second one spins the motor that has the wheel attached.
 
 Blog post: https://medium.com/@ab5074/creative-embedded-systems-final-project-7a16feaeb393
+https://medium.com/@ambermildenhall/edaa454b8bef
