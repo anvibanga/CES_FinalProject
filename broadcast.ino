@@ -29,7 +29,7 @@ int outPorts [] = {12, 27, 26, 25};
 void moveSteps(bool dir, int steps, byte ms) {
   for (unsigned long i = 0; i < steps; i++) {
     moveOneStep(dir); // Rotate a step
-    delay(constrain(ms,3,50));        // Control the speed
+    delay(constrain(ms,3,20));        // Control the speed
   }
 }
 
@@ -85,7 +85,7 @@ setup()
 
 
   WiFi.persistent(false);
-  bool ok = WifiEspNowBroadcast.begin("ESPNOW", 7);
+  bool ok = WifiEspNowBroadcast.begin("ESPNOW", 70);
   Serial.println("working");
   if (!ok) {
     Serial.println("WifiEspNowBroadcast.begin() failed");
@@ -132,7 +132,6 @@ loop()
   buttonValue = digitalRead(2);
   
   if (prevValue != buttonValue) { // button is pressed
-    Serial.println("test");
     prevValue = buttonValue;
     sendMessage();
   }
